@@ -1,0 +1,9 @@
+data:
+  raw_path: data/raw/fisheries_raw.csv
+  cleaned_path: data/processed/cleaned_data.csv
+  harmonized_path: data/processed/harmonized_data.csv
+  metrics_path: data/processed/sustainability_metrics.csv
+
+results:
+  figures_path: results/figures/
+  tables_path: results/tables/
