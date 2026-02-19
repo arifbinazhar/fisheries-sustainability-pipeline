@@ -53,9 +53,14 @@ metrics.rename(columns={
 # Stability Index
 # Higher = more stable fishery
 # -----------------------------------
+# metrics["stability_index"] = (
+#     metrics["avg_catch"] /
+#     metrics["catch_variability"]
+# )
+
 metrics["stability_index"] = (
     metrics["avg_catch"] /
-    metrics["catch_variability"]
+    (metrics["catch_variability"] + 1e-6)
 )
 
 # -----------------------------------
@@ -67,8 +72,8 @@ trend_list = []
 for loc, group in df.groupby("location"):
     group = group.sort_values("year")
 
-    first = group.iloc[0]["catch"]
-    last = group.iloc[-1]["catch"]
+    # first = group.iloc[0]["catch"]
+    # last = group.iloc[-1]["catch"]
 
     # We try going through average so as we can understand more clearly the growth 
     first = group.head(3)["catch"].mean()
