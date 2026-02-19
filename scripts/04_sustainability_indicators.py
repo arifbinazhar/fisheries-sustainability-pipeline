@@ -70,6 +70,11 @@ for loc, group in df.groupby("location"):
     first = group.iloc[0]["catch"]
     last = group.iloc[-1]["catch"]
 
+    # We try going through average so as we can understand more clearly the growth 
+    first = group.head(3)["catch"].mean()
+    last = group.tail(3)["catch"].mean()
+
+
     if first > 0:
         trend = last / first
     else:
