@@ -42,6 +42,8 @@ The catch trend index shows how the fish production has changed over time. We us
 
 The consumption pressure was used as a proxy indicator to understand how fisheries contribute to food systems versus industrial processing, allowing identification of regions where harvesting demand may impose higher sustainability stress.
 
+***Overall Pipeline for Data Interpretation***
+
 ```
 Raw Time Series
         ↓
@@ -54,7 +56,6 @@ Early vs Late Comparison
 Trend Indicator
         ↓
 Integrated Sustainability Metrics
-
 ```
 
 ## Example Outputs
