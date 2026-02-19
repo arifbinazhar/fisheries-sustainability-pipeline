@@ -97,10 +97,19 @@ pressure = df.groupby("location").agg({
     "fishmeal_and_fish_oil": "mean"
 }).reset_index()
 
+# pressure["consumption_pressure"] = (
+#     pressure["direct_consumption"] /
+#     (pressure["fishmeal_and_fish_oil"] + 1)
+# )
+
 pressure["consumption_pressure"] = (
     pressure["direct_consumption"] /
-    (pressure["fishmeal_and_fish_oil"] + 1)
+    (
+        pressure["direct_consumption"] +
+        pressure["fishmeal_and_fish_oil"]
+    )
 )
+
 
 metrics = metrics.merge(
     pressure[["location", "consumption_pressure"]],
