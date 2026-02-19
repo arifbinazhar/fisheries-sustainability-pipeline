@@ -31,18 +31,19 @@ python run_pipeline.py
 
 ## Data Interpretation From Sustainability Indicators
 
-***Stability Index***
+***Stability Index*** <br>
 
 The stability index quantifies temporal consistency in fisheries production. Regions showing high variability relative to average catch may indicate ecological stress or unstable harvesting patterns, making this a useful proxy for sustainability assessment.
 
-***Catch Trend Index***
+***Catch Trend Index*** <br>
+
 The catch trend index shows how the fish production has changed over time. We used the mean of latest three years as well as earliest three years to calculate this.
 
-***Consumption Pressure***
+***Consumption Pressure*** <br>
 
 The consumption pressure was used as a proxy indicator to understand how fisheries contribute to food systems versus industrial processing, allowing identification of regions where harvesting demand may impose higher sustainability stress.
 
-***Overall Pipeline for Data Interpretation***
+***Overall Pipeline for Data Interpretation*** <br>
 
 ```
 Raw Time Series
@@ -63,6 +64,14 @@ Integrated Sustainability Metrics
 - Harmonized dataset
 - Sustainability indicators
 - Trend visualizations
+
+## Plots and Analysis
+
+Below are the plots that we have generated which help to analys the better and identify the key regions with stress to their fishing outputs.
+
+
+Based on higher value of stability index we were able to plot top countries which has a stable fish production.
+![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/stable_regions.png)
 
 ## Relevance
 
