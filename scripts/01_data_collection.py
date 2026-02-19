@@ -1,12 +1,16 @@
 import pandas as pd
-import yaml
+import os
 
-with open("config/config.yaml") as f:
-    config = yaml.safe_load(f)
+url = "https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Global%20fish%20catch%20by%20end%20use%20(FishStat%20via%20SeaAroundUs)/Global%20fish%20catch%20by%20end%20use%20(FishStat%20via%20SeaAroundUs).csv"
 
-raw_path = config["data"]["raw_path"]
+df = pd.read_csv(url)
 
-df = pd.read_csv(raw_path)
+os.makedirs("data/raw", exist_ok=True)
 
-print("Raw data loaded:")
+df.to_csv("data/raw/fisheries_raw.csv", index=False)
+
+print("Dataset downloaded successfully.")
+print(df.head())
+print(df.shape)
+print(df.columns)
 print(df.head())
