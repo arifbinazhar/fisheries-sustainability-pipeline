@@ -70,7 +70,7 @@ Integrated Sustainability Metrics
 Below are the plots that we have generated which help to analys the better and identify the key regions with stress to their fishing outputs.
 
 
-Based on higher value of stability index we were able to plot top countries which has a stable fish production.
+Based on higher value of stability index we were able to plot top countries which has a stable fish production. <br><br>
 ![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/stable_regions.png)
 
 ## Relevance
