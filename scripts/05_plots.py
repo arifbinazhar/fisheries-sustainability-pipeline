@@ -9,15 +9,53 @@ metrics = pd.read_csv("data/processed/sustainability_metrics.csv")
 
 sns.set(style="whitegrid")
 
+
+top10 = (
+    metrics.sort_values("avg_catch", ascending=False)
+    .head(10)["location"]
+)
+
+metrics["location_group"] = metrics["location"].apply(
+    lambda x: x if x in list(top10) else "Other"
+)
+
+plt.figure(figsize=(10,7))
+
 sns.scatterplot(
     data=metrics,
     x="catch_trend_index",
-    y="stability_index"
+    y="stability_index",
+    hue="location_group",
+    palette="tab10",
+    s=80
 )
 
-plt.title("Fishery Sustainability Landscape")
-plt.savefig("results/figures/sustainability_landscape.png")
-plt.show()
+# plt.axvline(1, linestyle="--", color="gray")
+# plt.axhline(
+#     metrics["stability_index"].median(),
+#     linestyle="--",
+#     color="gray"
+# )
+
+plt.title("Fishery Sustainability Landscape", fontsize=14)
+plt.xlabel("Catch Trend Index")
+plt.ylabel("Stability Index")
+
+# plt.legend(
+#     title="Top Fisheries Regions",
+#     bbox_to_anchor=(1.05, 1),
+#     loc="upper left"
+# )
+
+# sns.scatterplot(
+#     data=metrics,
+#     x="catch_trend_index",
+#     y="stability_index", hue_order = "location"
+# )
+
+# plt.title("Fishery Sustainability Landscape")
+# plt.savefig("results/figures/sustainability_landscape.png")
+# plt.show()
 
 metrics = pd.read_csv("data/processed/sustainability_metrics.csv")
 
@@ -37,8 +75,9 @@ plt.show()
 
 #-----------------------------------------------
 
+x = df[df["location"].str.lower() != "world"]
 top_regions = (
-    df.groupby("location")["catch"]
+    x.groupby("location")["catch"]
     .sum()
     .sort_values(ascending=False)
     .head(10)
@@ -129,6 +168,28 @@ plt.tight_layout()
 plt.savefig("results/figures/stable_regions.png")
 plt.show()
 
+
+#---------------------unstable 
+stable = metrics.sort_values(
+    "stability_index",
+    ascending=False
+).tail(15)
+
+plt.figure(figsize=(10,7))
+
+sns.barplot(
+    data=stable,
+    x="stability_index",
+    y="location"
+)
+
+plt.title("Most Unstable Fisheries Regions")
+plt.xlabel("Stability Index")
+plt.ylabel("Region")
+
+plt.tight_layout()
+plt.savefig("results/figures/unstable_regions.png")
+plt.show()
 
 #------------------------------------------------
 plt.figure(figsize=(8,6))
