@@ -70,7 +70,7 @@ top_regions = (
 )
 
 plt.figure(figsize=(10,6))
-top_regions.plot(kind="bar")
+top_regions.plot(kind="bar",)
 
 plt.title("Top 10 Fisheries Producing Regions")
 plt.xlabel("Region")
@@ -88,7 +88,8 @@ plt.figure(figsize=(8,6))
 sns.histplot(
     metrics["catch_variability"],
     bins=30,
-    kde=True
+    kde=True,
+    palette = "paired"
 )
 
 plt.title("Distribution of Catch Variability Across Regions")
@@ -105,7 +106,8 @@ plt.figure(figsize=(9,7))
 sns.scatterplot(
     data=metrics,
     x="catch_trend_index",
-    y="stability_index"
+    y="stability_index",
+    palette= "tab10",hue="stability_index",legend=False
 )
 
 plt.axvline(1, linestyle="--")
@@ -124,7 +126,8 @@ plt.figure(figsize=(10,6))
 sns.scatterplot(
     data=metrics,
     x="catch_trend_index",
-    y="consumption_pressure"
+    y="consumption_pressure",
+    palette="tab10",hue="consumption_pressure",legend=False
 )
 
 # sns.boxplot(
@@ -149,7 +152,9 @@ plt.figure(figsize=(10,7))
 sns.barplot(
     data=stable,
     x="stability_index",
-    y="location"
+    y="location",
+    palette="tab10",hue="location",legend=False
+
 )
 
 plt.title("Most Stable Fisheries Regions")
