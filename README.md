@@ -67,7 +67,14 @@ Integrated Sustainability Metrics
 
 ## Plots and Analysis
 
-Below are the plots that we have generated which help to analys the better and identify the key regions with stress to their fishing outputs.
+Below are the plots that we have generated which help to analyse the better and identify the key regions with stress to their fishing outputs.
+
+The plot below maps fisheries across Catch Trend Index (log scale) and Stability Index, representing growth and temporal consistency, respectively.
+
+![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/sustainability_landscape.png)
+
+
+Above plot helps to visualise multiple trends including subset of fisheries that shows high growth but lower stability (Peru and Indonesia), suggesting potential sustainability risks linked to rapid expansion and fluctuating harvest levels.
 
 
 Based on higher value of stability index we were able to plot top countries which has a stable fish production. <br><br>
