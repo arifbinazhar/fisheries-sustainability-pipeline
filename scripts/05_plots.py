@@ -57,6 +57,8 @@ plt.tight_layout()
 plt.savefig("results/figures/global_catch_trend.png")
 plt.show()
 
+
+
 #-----------------------------------------------
 
 x = df[df["location"].str.lower() != "world"]
@@ -119,9 +121,15 @@ plt.show()
 
 plt.figure(figsize=(10,6))
 
-sns.boxplot(
-    y=metrics["consumption_pressure"]
+sns.scatterplot(
+    data=metrics,
+    x="catch_trend_index",
+    y="consumption_pressure"
 )
+
+# sns.boxplot(
+#     y=metrics["consumption_pressure"]
+# )
 
 plt.title("Distribution of Consumption Pressure")
 plt.ylabel("Consumption Pressure Ratio")
