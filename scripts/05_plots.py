@@ -19,6 +19,11 @@ metrics["location_group"] = metrics["location"].apply(
     lambda x: x if x in list(top10) else "Other"
 )
 
+top_catch = (
+    metrics.sort_values("catch_trend_index", ascending=False)
+    .head(10)["location"]
+)
+
 plt.figure(figsize=(10,7))
 
 sns.scatterplot(
@@ -26,36 +31,15 @@ sns.scatterplot(
     x="catch_trend_index",
     y="stability_index",
     hue="location_group",
-    palette="tab10",
+    palette="Paired",    
     s=80
 )
-
-# plt.axvline(1, linestyle="--", color="gray")
-# plt.axhline(
-#     metrics["stability_index"].median(),
-#     linestyle="--",
-#     color="gray"
-# )
 
 plt.title("Fishery Sustainability Landscape", fontsize=14)
 plt.xlabel("Catch Trend Index")
 plt.ylabel("Stability Index")
-
-# plt.legend(
-#     title="Top Fisheries Regions",
-#     bbox_to_anchor=(1.05, 1),
-#     loc="upper left"
-# )
-
-# sns.scatterplot(
-#     data=metrics,
-#     x="catch_trend_index",
-#     y="stability_index", hue_order = "location"
-# )
-
-# plt.title("Fishery Sustainability Landscape")
-# plt.savefig("results/figures/sustainability_landscape.png")
-# plt.show()
+plt.savefig("results/figures/sustainablity_landscape.png")
+plt.show()
 
 metrics = pd.read_csv("data/processed/sustainability_metrics.csv")
 
