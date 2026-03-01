@@ -69,7 +69,7 @@ Integrated Sustainability Metrics
 
 Below are the plots that we have generated which help to analyse the better and identify the key regions with stress to their fishing outputs.
 
-The plot below maps fisheries across Catch Trend Index (log scale) and Stability Index, representing growth and temporal consistency, respectively.
+**The plot below maps fisheries across Catch Trend Index (log scale) and Stability Index, representing growth and temporal consistency, respectively.**
 
 ![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/sustainability_landscape.png)
 
@@ -77,13 +77,13 @@ The plot below maps fisheries across Catch Trend Index (log scale) and Stability
 Above plot helps to visualise multiple trends including subset of fisheries that shows high growth but lower stability (Peru and Indonesia), suggesting potential sustainability risks linked to rapid expansion and fluctuating harvest levels.
 
 
-Based on higher value of stability index we were able to plot top countries which has a stable fish production (United Kingdom being the most stable region). <br><br>
+**Based on higher value of stability index we were able to plot top countries which has a stable fish production (United Kingdom being the most stable region). **<br><br>
 ![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/stable_regions.png)
 
-The graph below shows top 10 fish producing regions with respect to total catch. **Russia** and **Japan** turns out to be the largest fish producing regions.
+**The graph below shows top 10 fish producing regions with respect to total catch. _Russia_ and _Japan_ turns out to be the largest fish producing regions.**
 ![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/top_regions.png) <br>
 
-__Russia emerges as the largest fisheries producer, contributing the highest cumulative catch among all analyzed regions.__
+__Russia emerges as the largest fisheries producer, contributing the highest cumulative catch among all analyzed regions.__ <br>
 __Japan, China, and Peru also demonstrate consistently high production levels, reflecting their long-established and industrialized fisheries sectors.__
 
 
