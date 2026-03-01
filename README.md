@@ -83,10 +83,8 @@ Above plot helps to visualise multiple trends including subset of fisheries that
 **The graph below shows top 10 fish producing regions with respect to total catch. _Russia_ and _Japan_ turns out to be the largest fish producing regions.**
 ![alt text](https://github.com/arifbinazhar/fisheries-sustainability-pipeline/blob/main/results/figures/top_regions.png) <br>
 
-__Russia emerges as the largest fisheries producer, contributing the highest cumulative catch among all analyzed regions.__ <br>
+__Russia emerges as the largest fisheries producer, contributing the highest cumulative catch among all analyzed regions.__ <br><br>
 __Japan, China, and Peru also demonstrate consistently high production levels, reflecting their long-established and industrialized fisheries sectors.__
-
-
 
 
 
